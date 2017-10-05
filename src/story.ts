@@ -2,16 +2,16 @@ import {Entity} from "./entity";
 import {Task} from "./task";
 
 export class Story extends Entity {
-  private _finished: boolean;
+  private _completed: boolean;
   private _responsible: string;
   private _tasks: Array<Task> = [];
 
-  get finished(): boolean {
-    return this._finished;
+  get completed(): boolean {
+    return this._completed;
   }
 
-  set finished(value: boolean) {
-    this._finished = value;
+  set completed(value: boolean) {
+    this._completed = value;
   }
 
   get responsible(): string {
