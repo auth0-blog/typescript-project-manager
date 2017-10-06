@@ -1,0 +1,26 @@
+{
+  "name": "project-manager-ts",
+  "version": "1.0.0",
+  "description": "A project management tool written with TypeScript.",
+  "main": "index.js",
+  "bin": {
+    "project-manager-ts": "completable.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auth0-blog/typescript-project-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/auth0-blog/typescript-project-manager/issues"
+  },
+  "homepage": "https://github.com/auth0-blog/typescript-project-manager#readme",
+  "devDependencies": {
+    "ts-node": "^3.3.0"
+  }
+}
