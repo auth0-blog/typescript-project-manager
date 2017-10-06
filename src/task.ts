@@ -1,15 +1,15 @@
 import {Entity} from "./entity";
 
 export class Task extends Entity {
-  private _finished: boolean;
+  private _completed: boolean;
   private _priority: number;
 
-  get finished(): boolean {
-    return this._finished;
+  get completed(): boolean {
+    return this._completed;
   }
 
-  set finished(value: boolean) {
-    this._finished = value;
+  set completed(value: boolean) {
+    this._completed = value;
   }
 
   get priority(): number {
