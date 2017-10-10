@@ -17,7 +17,7 @@ export class Entity {
 
   @Log()
   get title(): string {
-    Entity.wait(1572);
+    Entity.wait(572);
     return this._title;
   }
 
