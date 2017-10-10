@@ -4,7 +4,8 @@
     "target": "es2015",
     "removeComments": true,
     "sourceMap": true,
-    "outDir": "./bin"
+    "outDir": "./bin",
+    "experimentalDecorators": true
   },
   "include": ["src/**/*"]
 }

@@ -1,14 +1,18 @@
 export function Log() {
   return function (target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor<any>) {
     // keep a reference to the original function
-    let originalFunction = descriptor.value;
+    let originalFunction = descriptor.value || descriptor.get;
 
-    // redefine the function as a wrapper that logs when the
-    descriptor.value = function() {
-      console.log( `${new Date().toISOString()} - ${propertyKey} started executing`);
+    // wrap the call to the original function to log when it
+    function wrapper() {
+      let startedAt = +new Date();
       let returnValue = originalFunction.apply(this);
-      console.log( `${new Date().toISOString()} - ${propertyKey} finished executing`);
+      let endedAt = +new Date();
+      console.log(`${propertyKey} executed in ${(endedAt - startedAt)} milliseconds`);
       return returnValue;
     }
+
+    if (descriptor.value) descriptor.value = wrapper;
+    else if (descriptor.get) descriptor.get = wrapper;
   };
 }
